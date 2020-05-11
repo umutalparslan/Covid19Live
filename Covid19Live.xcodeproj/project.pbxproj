@@ -1,0 +1,634 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2F31CFA62435F41100EF945E /* covidVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F31CFA52435F41100EF945E /* covidVC.swift */; };
+		2F89F708242ABEF0005A06E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F89F707242ABEF0005A06E1 /* AppDelegate.swift */; };
+		2F89F70A242ABEF0005A06E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F89F709242ABEF0005A06E1 /* SceneDelegate.swift */; };
+		2F89F70F242ABEF0005A06E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F89F70D242ABEF0005A06E1 /* Main.storyboard */; };
+		2F89F711242ABEF1005A06E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F89F710242ABEF1005A06E1 /* Assets.xcassets */; };
+		2F89F714242ABEF1005A06E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F89F712242ABEF1005A06E1 /* LaunchScreen.storyboard */; };
+		2FADDB162437A032004F9B27 /* CountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FADDB152437A032004F9B27 /* CountryCell.swift */; };
+		2FADDB182438E765004F9B27 /* CountryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FADDB172438E765004F9B27 /* CountryVC.swift */; };
+		2FAE2D29242DE09F00BA0CC1 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE2D28242DE09F00BA0CC1 /* NotificationService.swift */; };
+		2FAE2D2D242DE09F00BA0CC1 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2FAE2D26242DE09F00BA0CC1 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CD509E6D83AA7AC8C833FFFB /* Pods_Covid19Live.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 566542B3A21CE95B19DC293D /* Pods_Covid19Live.framework */; };
+		E04852F7A6D403B908E6F319 /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7298860650BEFA5CD8941995 /* Pods_OneSignalNotificationServiceExtension.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2FAE2D2B242DE09F00BA0CC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F89F6FC242ABEF0005A06E1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2FAE2D25242DE09F00BA0CC1;
+			remoteInfo = OneSignalNotificationServiceExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2FAE2D2E242DE09F00BA0CC1 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				2FAE2D2D242DE09F00BA0CC1 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2FAE2D36242DFD9300BA0CC1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2F31CFA52435F41100EF945E /* covidVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = covidVC.swift; sourceTree = "<group>"; };
+		2F89F704242ABEF0005A06E1 /* Covid19Live.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Covid19Live.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F89F707242ABEF0005A06E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2F89F709242ABEF0005A06E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2F89F70E242ABEF0005A06E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2F89F710242ABEF1005A06E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2F89F713242ABEF1005A06E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2F89F715242ABEF1005A06E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2FADDB152437A032004F9B27 /* CountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCell.swift; sourceTree = "<group>"; };
+		2FADDB172438E765004F9B27 /* CountryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryVC.swift; sourceTree = "<group>"; };
+		2FAE2D26242DE09F00BA0CC1 /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FAE2D28242DE09F00BA0CC1 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		2FAE2D2A242DE09F00BA0CC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2FAE2D32242DE11400BA0CC1 /* Covid19Live.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Covid19Live.entitlements; sourceTree = "<group>"; };
+		2FB72E26243A3A8100D0053B /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Main.strings; sourceTree = "<group>"; };
+		2FB72E27243A3A8400D0053B /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		4329338A2B17048D58408940 /* Pods-Covid19Live.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Covid19Live.debug.xcconfig"; path = "Target Support Files/Pods-Covid19Live/Pods-Covid19Live.debug.xcconfig"; sourceTree = "<group>"; };
+		4CCFFEE90A26429ACB1B8287 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
+		566542B3A21CE95B19DC293D /* Pods_Covid19Live.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Covid19Live.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7298860650BEFA5CD8941995 /* Pods_OneSignalNotificationServiceExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneSignalNotificationServiceExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D89E4268AEFE0EAFA23787B /* Pods-Covid19Live.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Covid19Live.release.xcconfig"; path = "Target Support Files/Pods-Covid19Live/Pods-Covid19Live.release.xcconfig"; sourceTree = "<group>"; };
+		7EDAD0D2AD2EAD779119FDC0 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		906603F6BA5AC232CFBC83D9 /* Pods-EvdeKalTurkiye.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EvdeKalTurkiye.debug.xcconfig"; path = "Target Support Files/Pods-EvdeKalTurkiye/Pods-EvdeKalTurkiye.debug.xcconfig"; sourceTree = "<group>"; };
+		AE9EBD11E01AB60A6B8280FB /* Pods-EvdeKalTurkiye.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EvdeKalTurkiye.release.xcconfig"; path = "Target Support Files/Pods-EvdeKalTurkiye/Pods-EvdeKalTurkiye.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2F89F701242ABEF0005A06E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD509E6D83AA7AC8C833FFFB /* Pods_Covid19Live.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2FAE2D23242DE09F00BA0CC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E04852F7A6D403B908E6F319 /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2F89F6FB242ABEF0005A06E1 = {
+			isa = PBXGroup;
+			children = (
+				2F89F706242ABEF0005A06E1 /* Covid19Live */,
+				2FAE2D27242DE09F00BA0CC1 /* OneSignalNotificationServiceExtension */,
+				2F89F705242ABEF0005A06E1 /* Products */,
+				5B1183074BF9DC5F86A7ABFE /* Pods */,
+				DDE12804E1A20B5EEF5EE54C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2F89F705242ABEF0005A06E1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2F89F704242ABEF0005A06E1 /* Covid19Live.app */,
+				2FAE2D26242DE09F00BA0CC1 /* OneSignalNotificationServiceExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2F89F706242ABEF0005A06E1 /* Covid19Live */ = {
+			isa = PBXGroup;
+			children = (
+				2FAE2D32242DE11400BA0CC1 /* Covid19Live.entitlements */,
+				2F89F707242ABEF0005A06E1 /* AppDelegate.swift */,
+				2F89F709242ABEF0005A06E1 /* SceneDelegate.swift */,
+				2F89F70D242ABEF0005A06E1 /* Main.storyboard */,
+				2F89F710242ABEF1005A06E1 /* Assets.xcassets */,
+				2F89F712242ABEF1005A06E1 /* LaunchScreen.storyboard */,
+				2F89F715242ABEF1005A06E1 /* Info.plist */,
+				2F31CFA52435F41100EF945E /* covidVC.swift */,
+				2FADDB152437A032004F9B27 /* CountryCell.swift */,
+				2FADDB172438E765004F9B27 /* CountryVC.swift */,
+			);
+			path = Covid19Live;
+			sourceTree = "<group>";
+		};
+		2FAE2D27242DE09F00BA0CC1 /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXGroup;
+			children = (
+				2FAE2D28242DE09F00BA0CC1 /* NotificationService.swift */,
+				2FAE2D2A242DE09F00BA0CC1 /* Info.plist */,
+			);
+			path = OneSignalNotificationServiceExtension;
+			sourceTree = "<group>";
+		};
+		5B1183074BF9DC5F86A7ABFE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				906603F6BA5AC232CFBC83D9 /* Pods-EvdeKalTurkiye.debug.xcconfig */,
+				AE9EBD11E01AB60A6B8280FB /* Pods-EvdeKalTurkiye.release.xcconfig */,
+				7EDAD0D2AD2EAD779119FDC0 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */,
+				4CCFFEE90A26429ACB1B8287 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */,
+				4329338A2B17048D58408940 /* Pods-Covid19Live.debug.xcconfig */,
+				7D89E4268AEFE0EAFA23787B /* Pods-Covid19Live.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DDE12804E1A20B5EEF5EE54C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7298860650BEFA5CD8941995 /* Pods_OneSignalNotificationServiceExtension.framework */,
+				566542B3A21CE95B19DC293D /* Pods_Covid19Live.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2F89F703242ABEF0005A06E1 /* Covid19Live */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F89F718242ABEF1005A06E1 /* Build configuration list for PBXNativeTarget "Covid19Live" */;
+			buildPhases = (
+				652073D314CE65F75C212A3D /* [CP] Check Pods Manifest.lock */,
+				2F89F700242ABEF0005A06E1 /* Sources */,
+				2F89F701242ABEF0005A06E1 /* Frameworks */,
+				2F89F702242ABEF0005A06E1 /* Resources */,
+				4C90B00E685479E8C13F3770 /* [CP] Embed Pods Frameworks */,
+				2FAE2D2E242DE09F00BA0CC1 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2FAE2D2C242DE09F00BA0CC1 /* PBXTargetDependency */,
+			);
+			name = Covid19Live;
+			productName = EvdeKalTurkiye;
+			productReference = 2F89F704242ABEF0005A06E1 /* Covid19Live.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2FAE2D25242DE09F00BA0CC1 /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2FAE2D31242DE09F00BA0CC1 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */;
+			buildPhases = (
+				628F8C3A572D52521ECEEC00 /* [CP] Check Pods Manifest.lock */,
+				2FAE2D22242DE09F00BA0CC1 /* Sources */,
+				2FAE2D23242DE09F00BA0CC1 /* Frameworks */,
+				2FAE2D24242DE09F00BA0CC1 /* Resources */,
+				2FAE2D36242DFD9300BA0CC1 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OneSignalNotificationServiceExtension;
+			productName = OneSignalNotificationServiceExtension;
+			productReference = 2FAE2D26242DE09F00BA0CC1 /* OneSignalNotificationServiceExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2F89F6FC242ABEF0005A06E1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Umut Can Alparslan";
+				TargetAttributes = {
+					2F89F703242ABEF0005A06E1 = {
+						CreatedOnToolsVersion = 11.4;
+					};
+					2FAE2D25242DE09F00BA0CC1 = {
+						CreatedOnToolsVersion = 11.4;
+					};
+				};
+			};
+			buildConfigurationList = 2F89F6FF242ABEF0005A06E1 /* Build configuration list for PBXProject "Covid19Live" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				tr,
+			);
+			mainGroup = 2F89F6FB242ABEF0005A06E1;
+			productRefGroup = 2F89F705242ABEF0005A06E1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2F89F703242ABEF0005A06E1 /* Covid19Live */,
+				2FAE2D25242DE09F00BA0CC1 /* OneSignalNotificationServiceExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2F89F702242ABEF0005A06E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F89F714242ABEF1005A06E1 /* LaunchScreen.storyboard in Resources */,
+				2F89F711242ABEF1005A06E1 /* Assets.xcassets in Resources */,
+				2F89F70F242ABEF0005A06E1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2FAE2D24242DE09F00BA0CC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4C90B00E685479E8C13F3770 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Covid19Live/Pods-Covid19Live-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Covid19Live/Pods-Covid19Live-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Covid19Live/Pods-Covid19Live-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		628F8C3A572D52521ECEEC00 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OneSignalNotificationServiceExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		652073D314CE65F75C212A3D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Covid19Live-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2F89F700242ABEF0005A06E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F31CFA62435F41100EF945E /* covidVC.swift in Sources */,
+				2FADDB162437A032004F9B27 /* CountryCell.swift in Sources */,
+				2F89F708242ABEF0005A06E1 /* AppDelegate.swift in Sources */,
+				2FADDB182438E765004F9B27 /* CountryVC.swift in Sources */,
+				2F89F70A242ABEF0005A06E1 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2FAE2D22242DE09F00BA0CC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FAE2D29242DE09F00BA0CC1 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2FAE2D2C242DE09F00BA0CC1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2FAE2D25242DE09F00BA0CC1 /* OneSignalNotificationServiceExtension */;
+			targetProxy = 2FAE2D2B242DE09F00BA0CC1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2F89F70D242ABEF0005A06E1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2F89F70E242ABEF0005A06E1 /* Base */,
+				2FB72E26243A3A8100D0053B /* tr */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2F89F712242ABEF1005A06E1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2F89F713242ABEF1005A06E1 /* Base */,
+				2FB72E27243A3A8400D0053B /* tr */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2F89F716242ABEF1005A06E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2F89F717242ABEF1005A06E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2F89F719242ABEF1005A06E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4329338A2B17048D58408940 /* Pods-Covid19Live.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Covid19Live/Covid19Live.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 286V3462NC;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = Covid19Live/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.umutcanalparslan.Covid19Live;
+				PRODUCT_NAME = Covid19Live;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		2F89F71A242ABEF1005A06E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D89E4268AEFE0EAFA23787B /* Pods-Covid19Live.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Covid19Live/Covid19Live.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 286V3462NC;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = Covid19Live/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.umutcanalparslan.Covid19Live;
+				PRODUCT_NAME = Covid19Live;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		2FAE2D2F242DE09F00BA0CC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EDAD0D2AD2EAD779119FDC0 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 286V3462NC;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.umutcanalparslan.Covid19Live.OneSignalNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2FAE2D30242DE09F00BA0CC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CCFFEE90A26429ACB1B8287 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 286V3462NC;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.umutcanalparslan.Covid19Live.OneSignalNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2F89F6FF242ABEF0005A06E1 /* Build configuration list for PBXProject "Covid19Live" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F89F716242ABEF1005A06E1 /* Debug */,
+				2F89F717242ABEF1005A06E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F89F718242ABEF1005A06E1 /* Build configuration list for PBXNativeTarget "Covid19Live" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F89F719242ABEF1005A06E1 /* Debug */,
+				2F89F71A242ABEF1005A06E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2FAE2D31242DE09F00BA0CC1 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2FAE2D2F242DE09F00BA0CC1 /* Debug */,
+				2FAE2D30242DE09F00BA0CC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2F89F6FC242ABEF0005A06E1 /* Project object */;
+}
