@@ -3,6 +3,7 @@
 ## Data
 
 I'm using https://corona.lmao.ninja/ API for data
+Github: https://github.com/NovelCOVID/API
 
 ### OneSignal
 Please update AppDelegate for using OneSignal
