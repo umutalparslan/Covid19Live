@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		2F31CFA62435F41100EF945E /* covidVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F31CFA52435F41100EF945E /* covidVC.swift */; };
+		2F3DE1EE246D4BF4005B622F /* PNBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3DE1EC246D4BF3005B622F /* PNBarChart.swift */; };
+		2F3DE1EF246D4BF4005B622F /* PNBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3DE1ED246D4BF4005B622F /* PNBar.swift */; };
+		2F3DE1F4246D4C17005B622F /* PNColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3DE1F0246D4C16005B622F /* PNColor.swift */; };
+		2F3DE1F5246D4C17005B622F /* PNValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3DE1F1246D4C16005B622F /* PNValue.swift */; };
+		2F3DE1F6246D4C17005B622F /* PNGenericChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3DE1F2246D4C17005B622F /* PNGenericChart.swift */; };
+		2F3DE1F7246D4C17005B622F /* PNChartLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3DE1F3246D4C17005B622F /* PNChartLabel.swift */; };
+		2F7BF125246AA3F4000AAC4C /* ChartsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7BF124246AA3F4000AAC4C /* ChartsData.swift */; };
 		2F89F708242ABEF0005A06E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F89F707242ABEF0005A06E1 /* AppDelegate.swift */; };
 		2F89F70A242ABEF0005A06E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F89F709242ABEF0005A06E1 /* SceneDelegate.swift */; };
 		2F89F70F242ABEF0005A06E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F89F70D242ABEF0005A06E1 /* Main.storyboard */; };
@@ -57,6 +64,13 @@
 
 /* Begin PBXFileReference section */
 		2F31CFA52435F41100EF945E /* covidVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = covidVC.swift; sourceTree = "<group>"; };
+		2F3DE1EC246D4BF3005B622F /* PNBarChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNBarChart.swift; sourceTree = "<group>"; };
+		2F3DE1ED246D4BF4005B622F /* PNBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNBar.swift; sourceTree = "<group>"; };
+		2F3DE1F0246D4C16005B622F /* PNColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNColor.swift; sourceTree = "<group>"; };
+		2F3DE1F1246D4C16005B622F /* PNValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNValue.swift; sourceTree = "<group>"; };
+		2F3DE1F2246D4C17005B622F /* PNGenericChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNGenericChart.swift; sourceTree = "<group>"; };
+		2F3DE1F3246D4C17005B622F /* PNChartLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNChartLabel.swift; sourceTree = "<group>"; };
+		2F7BF124246AA3F4000AAC4C /* ChartsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsData.swift; sourceTree = "<group>"; };
 		2F89F704242ABEF0005A06E1 /* Covid19Live.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Covid19Live.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F89F707242ABEF0005A06E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F89F709242ABEF0005A06E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +149,13 @@
 				2F31CFA52435F41100EF945E /* covidVC.swift */,
 				2FADDB152437A032004F9B27 /* CountryCell.swift */,
 				2FADDB172438E765004F9B27 /* CountryVC.swift */,
+				2F7BF124246AA3F4000AAC4C /* ChartsData.swift */,
+				2F3DE1ED246D4BF4005B622F /* PNBar.swift */,
+				2F3DE1EC246D4BF3005B622F /* PNBarChart.swift */,
+				2F3DE1F3246D4C17005B622F /* PNChartLabel.swift */,
+				2F3DE1F0246D4C16005B622F /* PNColor.swift */,
+				2F3DE1F2246D4C17005B622F /* PNGenericChart.swift */,
+				2F3DE1F1246D4C16005B622F /* PNValue.swift */,
 			);
 			path = Covid19Live;
 			sourceTree = "<group>";
@@ -340,11 +361,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F3DE1F6246D4C17005B622F /* PNGenericChart.swift in Sources */,
 				2F31CFA62435F41100EF945E /* covidVC.swift in Sources */,
+				2F3DE1EF246D4BF4005B622F /* PNBar.swift in Sources */,
 				2FADDB162437A032004F9B27 /* CountryCell.swift in Sources */,
+				2F7BF125246AA3F4000AAC4C /* ChartsData.swift in Sources */,
+				2F3DE1F7246D4C17005B622F /* PNChartLabel.swift in Sources */,
 				2F89F708242ABEF0005A06E1 /* AppDelegate.swift in Sources */,
 				2FADDB182438E765004F9B27 /* CountryVC.swift in Sources */,
 				2F89F70A242ABEF0005A06E1 /* SceneDelegate.swift in Sources */,
+				2F3DE1EE246D4BF4005B622F /* PNBarChart.swift in Sources */,
+				2F3DE1F4246D4C17005B622F /* PNColor.swift in Sources */,
+				2F3DE1F5246D4C17005B622F /* PNValue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

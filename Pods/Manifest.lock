@@ -1,5 +1,8 @@
 PODS:
   - Alamofire (5.1.0)
+  - Charts (3.5.0):
+    - Charts/Core (= 3.5.0)
+  - Charts/Core (3.5.0)
   - Google-Mobile-Ads-SDK (7.58.0):
     - GoogleAppMeasurement (~> 6.0)
   - GoogleAppMeasurement (6.4.2):
@@ -39,6 +42,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - Charts
   - Google-Mobile-Ads-SDK
   - OneSignal (< 3.0, >= 2.11.2)
   - SDWebImage
@@ -47,6 +51,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Charts
     - Google-Mobile-Ads-SDK
     - GoogleAppMeasurement
     - GoogleUtilities
@@ -58,6 +63,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 9d5c5f602928e512395b30950c5984eca840093c
+  Charts: 40a08591df1f8ad5c223ddedfb1a06da92f24f7c
   Google-Mobile-Ads-SDK: 7052557293c75c676db55feb707ace9b790f32c1
   GoogleAppMeasurement: 2253e99c1f22638cf234c059144660c338ad76c3
   GoogleUtilities: 39530bc0ad980530298e9c4af8549e991fd033b1
@@ -67,6 +73,6 @@ SPEC CHECKSUMS:
   SDWebImage: 97351f6582ceca541ea294ba66a1fcb342a331c2
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: c328abe39920921ecd4e48adafcd0927ebfea85f
+PODFILE CHECKSUM: c7ae2d181238dbaae354c111accf32472462ad22
 
 COCOAPODS: 1.9.1

@@ -54,6 +54,13 @@ class CountryVC: UIViewController {
         deathsPerLabel.text = "Deaths Per One Million: \(deathsPerOneMillion)"
     }
     
+    @IBAction func goCharts(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "ChartsData") as? ChartsData
+        vc?.country = countryName
+        self.navigationController?.pushViewController(vc!, animated: true)
+    }
+    
+    
     
 
 }

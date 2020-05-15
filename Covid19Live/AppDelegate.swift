@@ -13,7 +13,6 @@ import GoogleMobileAds
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         //START OneSignal initialization code
@@ -21,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         // Replace 'YOUR_APP_ID' with your OneSignal App ID.
         OneSignal.initWithLaunchOptions(launchOptions,
-        appId: "OneSignal_AppID",
+        appId: "d705818f-5410-4226-8b0f-4b9b13fae8dc",
         handleNotificationAction: nil,
         settings: onesignalInitSettings)
 
