@@ -383,9 +383,10 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cie-hn-2Hj">
-                                <rect key="frame" x="169" y="817" width="76" height="30"/>
+                                <rect key="frame" x="20" y="817" width="374" height="30"/>
+                                <color key="backgroundColor" red="0.1333333333" green="0.15686274510000001" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="76" id="Ths-1m-sJD"/>
+                                    <constraint firstAttribute="width" constant="374" id="Ths-1m-sJD"/>
                                     <constraint firstAttribute="height" constant="30" id="eZl-zw-ETe"/>
                                 </constraints>
                                 <state key="normal" title="Chart View">
@@ -402,9 +403,9 @@
                             <constraint firstItem="rJ3-G5-C9F" firstAttribute="bottom" secondItem="Cie-hn-2Hj" secondAttribute="bottom" constant="15" id="54h-hn-EbU"/>
                             <constraint firstItem="zK5-a5-hNb" firstAttribute="top" secondItem="mtt-ud-hFW" secondAttribute="bottom" constant="20" id="Azp-ZQ-wNF"/>
                             <constraint firstItem="mtt-ud-hFW" firstAttribute="top" secondItem="rJ3-G5-C9F" secondAttribute="top" id="GHn-1o-hsT"/>
-                            <constraint firstItem="rJ3-G5-C9F" firstAttribute="trailing" secondItem="Cie-hn-2Hj" secondAttribute="trailing" constant="169" id="L3T-3n-Fnh"/>
+                            <constraint firstItem="rJ3-G5-C9F" firstAttribute="trailing" secondItem="Cie-hn-2Hj" secondAttribute="trailing" constant="20" id="L3T-3n-Fnh"/>
                             <constraint firstItem="rJ3-G5-C9F" firstAttribute="trailing" secondItem="mtt-ud-hFW" secondAttribute="trailing" constant="20" id="QbN-sa-hMp"/>
-                            <constraint firstItem="Cie-hn-2Hj" firstAttribute="leading" secondItem="rJ3-G5-C9F" secondAttribute="leading" constant="169" id="Vvf-4o-d8q"/>
+                            <constraint firstItem="Cie-hn-2Hj" firstAttribute="leading" secondItem="rJ3-G5-C9F" secondAttribute="leading" constant="20" id="Vvf-4o-d8q"/>
                             <constraint firstItem="rJ3-G5-C9F" firstAttribute="trailing" secondItem="zK5-a5-hNb" secondAttribute="trailing" constant="20" id="ehp-dk-dhq"/>
                             <constraint firstItem="zK5-a5-hNb" firstAttribute="leading" secondItem="rJ3-G5-C9F" secondAttribute="leading" constant="20" id="h2T-YQ-fPt"/>
                             <constraint firstItem="mtt-ud-hFW" firstAttribute="leading" secondItem="rJ3-G5-C9F" secondAttribute="leading" constant="20" id="j6a-9J-Bhp"/>
