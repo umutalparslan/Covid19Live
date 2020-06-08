@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+# platform :ios, '13.0'
 
 target 'Covid19Live' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -9,7 +9,7 @@ pod 'SwiftyJSON'
 pod 'Google-Mobile-Ads-SDK'
 pod 'OneSignal', '>= 2.11.2', '< 3.0'
 pod 'SDWebImage'
-pod 'PNChartSwift',:git => 'https://github.com/kevinzhow/PNChart-Swift.git'
+pod 'TinyConstraints'
   # Pods for Covid19Live
 end
 target 'OneSignalNotificationServiceExtension' do

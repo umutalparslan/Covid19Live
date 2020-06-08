@@ -21,37 +21,68 @@ class CountryVC: UIViewController {
     var active:String = ""
     var critical:String = ""
     var casesPerOneMillion:String = ""
-    var deathsPerOneMillion:String = ""
     
-    @IBOutlet weak var countryFlagImage: UIImageView!
-    @IBOutlet weak var countryNameLabel: UILabel!
-    @IBOutlet weak var casesLabel: UILabel!
-    @IBOutlet weak var todayCasesLabel: UILabel!
-    @IBOutlet weak var deathsLabel: UILabel!
-    @IBOutlet weak var todayDeathsLabel: UILabel!
-    @IBOutlet weak var recoveredLabel: UILabel!
-    @IBOutlet weak var activeLabel: UILabel!
-    @IBOutlet weak var criticalLabel: UILabel!
-    @IBOutlet weak var casesPerLabel: UILabel!
-    @IBOutlet weak var deathsPerLabel: UILabel!
+    var dataCount = [String]()
     
-    @IBOutlet weak var countryView: UIView!
+    var dataName = ["Cases", "Today Cases", "Deaths", "Today Deaths", "Recovered", "Active", "Critical", "Total Tests"]
     
-
+    
+    @IBOutlet weak var chartBtn: UIButton!
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        countryView.layer.cornerRadius = 10
-        countryFlagImage.sd_setImage(with: URL(string: countryFlag), placeholderImage: UIImage(named: "loading"))
-        countryNameLabel.text = countryName
-        casesLabel.text = "Cases: \(cases)"
-        todayCasesLabel.text = "Today Cases: \(todayCases)"
-        deathsLabel.text = "Deaths: \(deaths)"
-        todayDeathsLabel.text = "Today Deaths: \(todayDeaths)"
-        recoveredLabel.text = "Recovered: \(recovered)"
-        activeLabel.text = "Active: \(active)"
-        criticalLabel.text = "Critical: \(critical)"
-        casesPerLabel.text = "Cases Per One Million: \(casesPerOneMillion)"
-        deathsPerLabel.text = "Deaths Per One Million: \(deathsPerOneMillion)"
+        self.navigationItem.backBarButtonItem?.tintColor = .white
+        self.navigationItem.titleView = navTitleWithImageAndText(titleText: " \(countryName)")
+        tableView.layer.cornerRadius = 10
+        chartBtn.layer.cornerRadius = 10
+        tableView.delegate = self
+        tableView.dataSource = self
+        dataCount = ["\(self.cases)", "\(self.todayCases)", "\(self.deaths)","\(todayDeaths)","\(recovered)","\(active)","\(critical)","\(casesPerOneMillion)"]
+        tableView.reloadData()
+        tableView.separatorColor = .white
+        
+    }
+    
+    func navTitleWithImageAndText(titleText: String) -> UIView {
+        
+        // Creates a new UIView
+        let titleView = UIView()
+        
+        // Creates a new text label
+        let label = UILabel()
+        label.text = titleText
+        label.sizeToFit()
+        label.center = titleView.center
+        label.textAlignment = NSTextAlignment.center
+        
+        // Creates the image view
+        let image = UIImageView()
+        image.sd_setImage(with: URL(string: countryFlag), placeholderImage: UIImage(named: "loading"))
+        
+        // Maintains the image's aspect ratio:
+        let imageAspect = image.image!.size.width / image.image!.size.height
+        
+        // Sets the image frame so that it's immediately before the text:
+        let imageX = label.frame.origin.x - label.frame.size.height * imageAspect
+        let imageY = label.frame.origin.y
+        
+        let imageWidth = label.frame.size.height * imageAspect
+        let imageHeight = label.frame.size.height
+        
+        image.frame = CGRect(x: imageX, y: imageY, width: imageWidth, height: imageHeight)
+        
+        image.contentMode = UIView.ContentMode.scaleAspectFit
+        
+        // Adds both the label and image view to the titleView
+        titleView.addSubview(label)
+        titleView.addSubview(image)
+        
+        // Sets the titleView frame to fit within the UINavigation Title
+        titleView.sizeToFit()
+        
+        return titleView
+        
     }
     
     @IBAction func goCharts(_ sender: Any) {
@@ -60,7 +91,18 @@ class CountryVC: UIViewController {
         self.navigationController?.pushViewController(vc!, animated: true)
     }
     
-    
-    
+}
+
+extension CountryVC: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dataName.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let singleCountry = tableView.dequeueReusableCell(withIdentifier: "SingleCountry", for: indexPath) as! singleCountryCell
+        singleCountry.dataCount.text = dataCount[indexPath.row]
+        singleCountry.dataName.text = dataName[indexPath.row]
+        return singleCountry
+    }
 
 }

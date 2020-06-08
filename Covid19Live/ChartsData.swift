@@ -9,8 +9,10 @@
 import Alamofire
 import SwiftyJSON
 import UIKit
+import TinyConstraints
 
 class ChartsData: UIViewController {
+    
     @IBOutlet var chartView: UIView!
 
     var casesChart = [CGFloat]()
@@ -20,7 +22,7 @@ class ChartsData: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         title = "\(country) Chart View"
 
         let historicalUrl = "https://disease.sh/v2/historical/\(country)?lastdays=7"
@@ -33,24 +35,32 @@ class ChartsData: UIViewController {
                 dateFormatter.dateFormat = "M/d/yy"
                 let dateFormatterTR = DateFormatter()
                 dateFormatterTR.dateFormat = "dd/MM/yy"
+
+                
                 switch historicalData.result {
                 case let .success(s):
                     let historicalJSON = JSON(s)
 
                     for n in -7 ... -1 {
-                        let cases = historicalJSON["timeline"]["cases"]["\(dateFormatter.string(from: date.addingTimeInterval(TimeInterval(n * 24 * 60 * 60))))"].floatValue
+                        let cases = historicalJSON["timeline"]["cases"]["\(dateFormatter.string(from: date.addingTimeInterval(TimeInterval(n * 24 * 60 * 60))))"].doubleValue
                         self.casesChart.append(CGFloat(cases))
                         self.dayChart.append("\(dateFormatterTR.string(from: date.addingTimeInterval(TimeInterval(n * 24 * 60 * 60))))")
                     }
                     let barChart = self.setBarChart()
                     self.chartView.addSubview(barChart)
+                    self.chartView.width(to: self.chartView)
+                    self.chartView.heightToWidth(of: self.chartView)
+                    self.chartView.centerInSuperview()
+                    self.chartView.transform = CGAffineTransform(rotationAngle: .pi / 2)
+
                 case let .failure(er):
                     print(er)
                 }
             }
         }
-        chartView.transform = CGAffineTransform(rotationAngle: .pi / 2)
-    }
+        
+            }
+    
 
     private func setBarChart() -> PNBarChart {
         let barChart = PNBarChart(frame: CGRect(x: 0, y: 0, width: 480, height: 250))

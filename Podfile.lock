@@ -39,6 +39,7 @@ PODS:
     - SDWebImage/Core (= 5.7.3)
   - SDWebImage/Core (5.7.3)
   - SwiftyJSON (5.0.0)
+  - TinyConstraints (4.0.1)
 
 DEPENDENCIES:
   - Alamofire
@@ -47,6 +48,7 @@ DEPENDENCIES:
   - OneSignal (< 3.0, >= 2.11.2)
   - SDWebImage
   - SwiftyJSON
+  - TinyConstraints
 
 SPEC REPOS:
   trunk:
@@ -60,6 +62,7 @@ SPEC REPOS:
     - PromisesObjC
     - SDWebImage
     - SwiftyJSON
+    - TinyConstraints
 
 SPEC CHECKSUMS:
   Alamofire: 9d5c5f602928e512395b30950c5984eca840093c
@@ -72,7 +75,8 @@ SPEC CHECKSUMS:
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   SDWebImage: 97351f6582ceca541ea294ba66a1fcb342a331c2
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  TinyConstraints: 8dd91295e56797648c7bc335dd20e1d91ec4c192
 
-PODFILE CHECKSUM: c7ae2d181238dbaae354c111accf32472462ad22
+PODFILE CHECKSUM: ec718a4a4a9ca0cc577aec40f21c6bdf8494bb8d
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.9.3
